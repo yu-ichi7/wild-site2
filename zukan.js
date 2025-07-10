@@ -40,13 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardHtml = `
                 <a href="detail.html?id=${bird.id}" class="card-link">
                     <div class="bird-card">
-                        <img src="${bird.mainImage}" alt="${bird.nameJP}">
+                        <img 
+                            src="${bird.mainImage}" 
+                            alt="${bird.nameJP}"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=画像を読み込めませんでした';"
+                            loading="lazy"
+                        >
                         <div class="bird-card-content">
                             <h3>${bird.nameJP}</h3>
                         </div>
                     </div>
                 </a>
             `;
+            console.log(`Loading image for ${bird.nameJP}:`, bird.mainImage);
             birdGrid.innerHTML += cardHtml;
         });
     }
