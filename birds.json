@@ -83,6 +83,27 @@
                     "text": "主に昆虫やクモを食べますが、冬場は木の実や種子も食べます。シジュウカラの鳴き声には単語や文法のような構造があることが研究でわかっており、「鳥の言葉」を解明する上で非常に注目されています。"
                 }
             ]
+        },
+        {
+            "id": "pigeon",
+            "nameJP": "ドバト",
+            "nameEN": "Rock Dove",
+            "nameSCI": "Columba livia",
+            "mainImage": "https://source.unsplash.com/400x300/?pigeon",
+            "detailImages": [
+                "https://source.unsplash.com/800x600/?pigeon,city",
+                "https://source.unsplash.com/800x600/?pigeon,park"
+            ],
+            "descriptions": [
+                {
+                    "title": "特徴",
+                    "text": "公園や駅前など、都市部で最もよく見かけるハト。首元の緑や紫の光沢が美しいですが、個体によって様々な色合いがいます。"
+                },
+                {
+                    "title": "生態",
+                    "text": "元々は家畜として飼われていたカワラバトが野生化したもので、非常に人馴れしています。平和の象徴として知られています。"
+                }
+            ]
         }
     ]
 }
