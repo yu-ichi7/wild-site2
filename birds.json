@@ -1,0 +1,88 @@
+{
+    "birds": [
+        {
+            "id": "sparrow",
+            "nameJP": "スズメ",
+            "nameEN": "Eurasian Tree Sparrow",
+            "nameSCI": "Passer montanus",
+            "mainImage": "https://source.unsplash.com/400x300/?sparrow",
+            "detailImages": [
+                "https://source.unsplash.com/800x600/?sparrow,nature",
+                "https://source.unsplash.com/800x600/?sparrow,house"
+            ],
+            "descriptions": [
+                {
+                    "title": "特徴",
+                    "text": "頭が茶色で、頬に黒い斑点があるのが特徴です。日本では非常に身近な鳥で、市街地から農村部まで広く生息しています。"
+                },
+                {
+                    "title": "生態",
+                    "text": "主に植物の種子を食べますが、繁殖期には雛のために昆虫も捕らえます。人の近くで生活することに非常に適応しています。"
+                }
+            ]
+        },
+        {
+            "id": "crow",
+            "nameJP": "ハシブトガラス",
+            "nameEN": "Jungle Crow",
+            "nameSCI": "Corvus macrorhynchos",
+            "mainImage": "https://source.unsplash.com/400x300/?crow",
+            "detailImages": [
+                "https://source.unsplash.com/800x600/?crow,city",
+                "https://source.unsplash.com/800x600/?crow,nature"
+            ],
+            "descriptions": [
+                {
+                    "title": "特徴",
+                    "text": "名前の通り、太い（嘴太）くちばしが特徴的なカラスです。都市部でよく見られ、「カー、カー」という澄んだ声で鳴きます。全身が光沢のある黒色をしています。"
+                },
+                {
+                    "title": "生態・豆知識",
+                    "text": "非常に賢く、雑食性で、生ゴミや動物の死骸、木の実など何でも食べます。クルミを道路に置いて車に割らせるなど、道具を使うような行動も知られています。よく似たハシボソガラスよりも、おでこが盛り上がっているのが見分けるポイントの一つです。"
+                }
+            ]
+        },
+        {
+            "id": "mejiro",
+            "nameJP": "メジロ",
+            "nameEN": "Japanese White-eye",
+            "nameSCI": "Zosterops japonicus",
+            "mainImage": "https://source.unsplash.com/400x300/?white-eye-bird",
+            "detailImages": [
+                "https://source.unsplash.com/800x600/?white-eye-bird,flower",
+                "https://source.unsplash.com/800x600/?white-eye-bird,tree"
+            ],
+            "descriptions": [
+                {
+                    "title": "特徴",
+                    "text": "名前の通り、目の周りの白い輪（アイリング）が特徴的な、鮮やかなウグイス色の小鳥です。「チー、チー」と細く高い声で鳴きます。"
+                },
+                {
+                    "title": "生態・豆知識",
+                    "text": "花の蜜や果汁が大好きで、特に早春には梅や椿の花に集まる姿がよく見られます。メジロは非常に活発で、群れで行動することが多いです。ぎゅうぎゅうに押し合いながら枝に並ぶ姿は「目白押し」という言葉の語源にもなっています。"
+                }
+            ]
+        },
+        {
+            "id": "tit",
+            "nameJP": "シジュウカラ",
+            "nameEN": "Japanese Tit",
+            "nameSCI": "Parus minor",
+            "mainImage": "https://source.unsplash.com/400x300/?japanese-tit",
+            "detailImages": [
+                "https://source.unsplash.com/800x600/?japanese-tit,forest",
+                "https://source.unsplash.com/800x600/?japanese-tit,branch"
+            ],
+            "descriptions": [
+                {
+                    "title": "特徴",
+                    "text": "白い頬と、胸から腹にかけての黒いネクタイのような模様が特徴的な小鳥です。「ツピーツピー、ツツピー」など、非常に多彩な鳴き方をすることで知られています。"
+                },
+                {
+                    "title": "生態・豆知識",
+                    "text": "主に昆虫やクモを食べますが、冬場は木の実や種子も食べます。シジュウカラの鳴き声には単語や文法のような構造があることが研究でわかっており、「鳥の言葉」を解明する上で非常に注目されています。"
+                }
+            ]
+        }
+    ]
+}
