@@ -1,16 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded');
     const birdGrid = document.getElementById('bird-grid');
     const searchInput = document.getElementById('search-input');
     let allBirds = [];
 
     // JSONファイルから鳥のデータを取得
-    fetch('birds.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
+    console.log('Fetching birds.json...');
+    fetch('birds.json', { 
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        console.log('Response received:', response);
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
         .then(data => {
             allBirds = data.birds;
             displayBirds(allBirds);
