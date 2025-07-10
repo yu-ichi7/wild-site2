@@ -21,27 +21,45 @@
     </header>
     <main class="page-content">
         <div class="bird-detail-container">
-            <h1>ハシブトガラス</h1>
-            <div class="bird-detail-content">
-                <div class="bird-detail-image">
-                    <img src="https://source.unsplash.com/800x600/?crow" alt="ハシブトガラス">
-                </div>
+            <div class="bird-title-area">
+                <h1>ハシブトガラス</h1>
+                <p class="bird-name-en">Jungle Crow</p>
+                <p class="bird-name-sci"><i>Corvus macrorhynchos</i></p>
+            </div>
+
+            <div class="bird-detail-section">
+                <img src="https://source.unsplash.com/800x600/?crow,city" alt="ハシブトガラスの写真1">
                 <div class="bird-detail-text">
                     <h2>特徴</h2>
                     <p>名前の通り、太い（嘴太）くちばしが特徴的なカラスです。都市部でよく見られ、「カー、カー」という澄んだ声で鳴きます。全身が光沢のある黒色をしています。</p>
+                </div>
+            </div>
+
+            <div class="bird-detail-section">
+                <img src="https://source.unsplash.com/800x600/?crow,nature" alt="ハシブトガラスの写真2">
+                <div class="bird-detail-text">
                     <h2>生態</h2>
                     <p>非常に賢く、雑食性で、生ゴミや動物の死骸、木の実など何でも食べます。クルミを道路に置いて車に割らせるなど、道具を使うような行動も知られています。</p>
                     <h2>豆知識</h2>
                     <p>よく似たハシボソガラスよりも、おでこが盛り上がっているのが見分けるポイントの一つです。また、歩くときはぴょんぴょんと跳ねるように移動します。</p>
                 </div>
             </div>
+
             <div class="back-to-list">
                 <a href="../zukan.html">&laquo; 図鑑一覧に戻る</a>
+            </div>
+
+            <div class="recommend-section">
+                <h2>おすすめの野鳥</h2>
+                <div class="recommend-grid" id="recommend-grid">
+                    <!-- ここにJavaScriptでランダムな鳥が表示されます -->
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 野鳥と出会う日々. All Rights Reserved.</p>
     </footer>
+    <script src="../detail.js"></script>
 </body>
 </html>
