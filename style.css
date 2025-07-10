@@ -209,12 +209,13 @@ footer {
 }
 
 .bird-card-content {
-    padding: 15px;
+    padding: 15px 15px 20px;
     text-align: center;
 }
 
 .bird-card-content h3 {
     margin-top: 0;
+    margin-bottom: 0;
     font-size: 1.5rem;
     color: #333;
 }
