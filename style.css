@@ -220,6 +220,59 @@ footer {
     color: #333;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Bird Detail Page Styles */
+.bird-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bird-detail-content {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.bird-detail-image {
+    flex: 1;
+}
+
+.bird-detail-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.bird-detail-text {
+    flex: 1;
+}
+
+.bird-detail-text h2 {
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.back-to-list {
+    margin-top: 40px;
+}
+
+.back-to-list a {
+    text-decoration: none;
+    color: #5d8b71;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-list a:hover {
+    color: #333;
+}
+
 
 
 @media (min-width: 500px) {
@@ -241,6 +294,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     nav ul {
         justify-content: center;
         gap: 15px;
