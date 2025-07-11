@@ -5,71 +5,62 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1, 
             src: 'https://source.unsplash.com/800x600/?sparrow', 
             title: 'スズメの群れ', 
-            date: '2024-07-01', 
-            category: 'sparrow',
+            date: '2024-07-01',
             description: '公園で見かけたスズメの群れ。餌を探している様子です。'
         },
         { 
             id: 2, 
             src: 'https://source.unsplash.com/800x600/?pigeon', 
             title: '公園のハト', 
-            date: '2024-07-05', 
-            category: 'pigeon',
+            date: '2024-07-05',
             description: '広場でくつろぐハトの群れ。人懐っこい性格です。'
         },
         { 
             id: 3, 
             src: 'https://source.unsplash.com/800x600/?crow', 
             title: 'カラスの観察', 
-            date: '2024-07-10', 
-            category: 'crow',
+            date: '2024-07-10',
             description: '木の上で休むカラス。知能が高いことで知られています。'
         },
         { 
             id: 4, 
             src: 'https://source.unsplash.com/800x600/?bird', 
             title: '野鳥のさえずり', 
-            date: '2024-06-28', 
-            category: 'other',
+            date: '2024-06-28',
             description: '森で撮影した美しい野鳥の姿。'
         },
         { 
             id: 5, 
             src: 'https://source.unsplash.com/800x600/?sparrow,portrait', 
             title: 'スズメのポートレート', 
-            date: '2024-07-03', 
-            category: 'sparrow',
+            date: '2024-07-03',
             description: '近くで撮影したスズメのアップショット。'
         },
         { 
             id: 6, 
             src: 'https://source.unsplash.com/800x600/?pigeon,street', 
             title: '街中のハト', 
-            date: '2024-07-07', 
-            category: 'pigeon',
+            date: '2024-07-07',
             description: '都会の風景に溶け込むハトたち。'
         },
         { 
             id: 7, 
             src: 'https://source.unsplash.com/800x600/?crow,black', 
             title: '黒い羽根の輝き', 
-            date: '2024-07-09', 
-            category: 'crow',
+            date: '2024-07-09',
             description: '太陽の光を浴びて輝くカラスの羽根。'
         },
         { 
             id: 8, 
             src: 'https://source.unsplash.com/800x600/?bird,colorful', 
             title: '色鮮やかな野鳥', 
-            date: '2024-06-30', 
-            category: 'other',
+            date: '2024-06-30',
             description: '鮮やかな羽色が美しい野鳥を発見。'
         }
     ];
 
     // DOM要素の取得
     const galleryGrid = document.getElementById('gallery-grid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
     const modalCaption = document.getElementById('modal-caption');
@@ -81,10 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageNumbers = document.getElementById('page-numbers');
 
     // グローバル変数
-    let currentFilter = 'all';
     let currentPage = 1;
     const itemsPerPage = 8;
-    let currentFilteredData = [];
     let currentIndex = 0;
 
     // ギャラリーの初期化
@@ -98,11 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayGallery() {
         galleryGrid.innerHTML = '';
         
-        // フィルタリングされたデータを取得
-        currentFilteredData = currentFilter === 'all' 
-            ? [...galleryData] 
-            : galleryData.filter(item => item.category === currentFilter);
-        
         // ページネーションの更新
         updatePagination();
         
@@ -113,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         paginatedData.forEach((item, index) => {
             const galleryItem = document.createElement('div');
             galleryItem.className = 'gallery-item';
-            galleryItem.dataset.category = item.category;
             galleryItem.dataset.index = index;
             
             galleryItem.innerHTML = `
@@ -133,12 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function getPaginatedData() {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        return currentFilteredData.slice(startIndex, endIndex);
+        return galleryData.slice(startIndex, endIndex);
     }
 
     // ページネーションの更新
     function updatePagination() {
-        const totalPages = Math.ceil(currentFilteredData.length / itemsPerPage);
+        const totalPages = Math.ceil(galleryData.length / itemsPerPage);
         
         // 前へ・次へボタンの状態を更新
         prevPageBtn.disabled = currentPage === 1;
@@ -253,20 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // イベントリスナーの設定
     function setupEventListeners() {
-        // フィルターボタン
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // アクティブなボタンのスタイルを更新
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // フィルターを更新してギャラリーを再表示
-                currentFilter = button.dataset.filter;
-                currentPage = 1; // フィルター変更時は1ページ目に戻る
-                displayGallery();
-            });
-        });
-        
         // モーダル関連
         closeBtn.addEventListener('click', closeModal);
         prevBtn.addEventListener('click', showPrevImage);
